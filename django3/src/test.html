@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>나의 웹 페이지</title>
+</head>
+
+<body>
+	<!-- 주석달기 -->
+	<p style="background-color: red;"> Hello<br> Web Programming World! </p>
+	<pre>
+		pre 태그안의 내용은                여러개의 스페이스 와           
+		
+		
+		
+		
+		
+		여러개의       줄       넘김을  인식                      함
+	</pre>
+	<h1>header 의 약자</h1>
+	<h2>6으로 갈수록 글자크기 작아짐</h2>
+	<h6>굵은 글씨로 표현함</h6>
+	
+	<p> <b> 굵은 글씨 표현 </b>  <em> 글씨 기울이기 </em> </p>
+	<!-- p: 한 문단을 표현할 떄 쓰는 태그
+		h1~h6 : 굵은 글씨 표현 및 글씨 크기 조절 
+		b, strong : 굵은글씨 표현
+		i, em : 글씨 기울임 표현
+		pre : 태그안에서 모든 텍스트를 화면에 그대로 출력 -->
+	<!-- hr : 수평선 을 긋는 태그 
+		br : 줄을 바꾸는 태그 -->
+	<hr> 
+	<p> 수평선 긋기 </p>
+	
+	<ol> 
+		<li>리스트 항목 1</li>
+		<li><p> li 태그 안에 또 다른 태그의 사용가능 </p></li>
+		<li><h1>리스트 항목</h1></li>
+	</ol>
+	<!-- ul : 순서없는 리스트를 만들 때 사용
+		ol : 순서있는 리스트를 만들 떄 사용 
+		ul ol 영역안에 li 태그를 사용해서 항목을 추가할 수 있음 -->
+	<a href ="http://www.naver.com">네이버 바로가기</a>
+	<br>
+	<a href = "http://google.com">
+		<img src = "./a.jpg" width="20%" height="30%">
+	</a>
+	<!--  a: 링크를 만들떄 쓰는 태그
+		a태그는 반드시 href 속성이 필요함(클릭시 이동할 경로) 
+		img: HTML 화면에 이미지를 출력할 떄 쓰는 태그
+		img 대그는 반드시 src 속성이 필요함( 어떤 그림을 화면에 출력할지) -->
+	
+	<table border = "1" width = 50%>
+	<caption>표 설명</caption>
+		<tr>
+			<td> 1행 1열 </td>
+			<th colspan="2"> 1행 2열 </th>
+		</tr>
+		<tr>
+			<td rowspan = "2"> 2행 1열 </td>
+			<th> 2행 2열 </th>
+			<th> 2행 3열 </th>
+		</tr>
+		<tr>
+			<td> 3행 1열</td>
+			<td> 3행 2열</td>
+		</tr>
+	</table>
+	<!-- table  : 표를 만들때 사용하는 태그
+	 tr : 행 추가 
+	 td : 열 추가 (왼쪽정렬)
+	 th : 열 추가 (가운데정렬, 굵게)
+	 caption : 표 제목  -->
+	
+	
+	
+	
+</body>
+</html>

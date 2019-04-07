@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 파이썬 웹 서버 가즈아</title>
+{% block css %}
+{% endblock %}
+{% block jabascript %}
+{% endblock %}
+</head>
+<body>
+<!-- 배너 -->
+<a href = "{% url 'main' %}"> My HomePage </a>
+<!-- 로그인관련 링크 -->
+{% if user.is_authenticated %}
+	<p>{{user.last_name}} {{user_first_name}}님 환영합니다! 
+	<a href = "{% url 'cl:signout' %}">로그아웃</a> <p>
+{% else %}
+	<p>어서오세요! <a href= "{% url 'cl:signin' %}"> 로그인 </a>
+	<a href = "{% url 'cl:signup' %}" > 회원가입</a></p>
+	
+{% endif %}
+<a href = "{% url 'main' %}" > 북마크</a>
+<a href = "{% url 'vote:index' %}" > 설문조사</a>
+<a href = "{% url 'blog:index' %}"> 게시판</a>
+<a href = "/admin/" > 관리자 사이트</a>
+<hr>
+<!--  수정할 수 있는 공간 지정 
+ block tag : 해당 html 을 다른 html이 확장할 때 수정할 수 있는 공간을 설정함 
+ 다른 html 이 블록 내에 html 코드를 수정하고 싶은 경우, 
+ 블록이름과 동일한 블록을 생성해 HTML 코드 작성 -->
+{% block content %}
+{% endblock %}
+
+<!-- 하위메뉴 -->
+<hr>
+
+<p> 주소 : 서울특별시 노원구 </p>
+<p> 전화번호 : 010-1234-5678 </p>
+
+</body>
+</html>
